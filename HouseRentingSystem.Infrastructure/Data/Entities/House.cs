@@ -26,6 +26,7 @@ namespace HouseRentingSystem.Infrastructure.Data.Entities
         public string ImageUrl { get; set; } = null!;
 
         [Required]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal PricePerMonth { get; set; }
 
         [ForeignKey(nameof(Category))]

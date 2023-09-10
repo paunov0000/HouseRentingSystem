@@ -12,6 +12,11 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => 
 {
     options.SignIn.RequireConfirmedAccount = false;
+    options.Password.RequireDigit = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequiredLength = 3;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
 })
     .AddEntityFrameworkStores<HouseRentingDbContext>();
 builder.Services.AddControllersWithViews();

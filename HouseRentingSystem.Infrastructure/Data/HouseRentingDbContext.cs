@@ -1,4 +1,6 @@
-﻿using HouseRentingSystem.Infrastructure.Data.Entities;
+﻿using HouseRentingSystem.Infrastructure.Data.Configuration;
+using HouseRentingSystem.Infrastructure.Data.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,6 +32,11 @@ namespace HouseRentingSystem.Infrastructure.Data
                 .WithMany() //TODO: does it basically mean that agent has a collection with houses?
                 .HasForeignKey(h => h.AgentId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.ApplyConfiguration<House>(new HouseConfiguration());
+            builder.ApplyConfiguration<Agent>(new AgentConfiguration());
+            builder.ApplyConfiguration<Category>(new CategoryConfiguration());
+            builder.ApplyConfiguration<IdentityUser>(new UserConfiguration());
 
 
             base.OnModelCreating(builder);
