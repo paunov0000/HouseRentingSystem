@@ -1,4 +1,4 @@
-﻿namespace HouseRentingSystem.Models.Agents
+﻿namespace HouseRentingSystem.Core.Models.Agents
 {
     public class BecomeAgentFormModel
     {
