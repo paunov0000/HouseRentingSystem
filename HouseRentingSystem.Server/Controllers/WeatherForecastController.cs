@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace HouseRentingSystem.Controllers
+namespace HouseRentingSystem.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]

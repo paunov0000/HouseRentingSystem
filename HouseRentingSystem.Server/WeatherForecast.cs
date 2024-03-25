@@ -1,4 +1,4 @@
-namespace HouseRentingSystem
+namespace HouseRentingSystem.Server
 {
     public class WeatherForecast
     {
