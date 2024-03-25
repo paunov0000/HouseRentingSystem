@@ -10,7 +10,7 @@ function DisplayForecast() {
     }, []);
 
     return (
-        forecasts === null ? "Data still hasnt fetched" :
+        forecasts === null ? <p>Data still hasnt fetched</p> :
             forecasts.map(forecast =>
                 <tr key={forecast.date}>
                     <td>{forecast.date}</td>
