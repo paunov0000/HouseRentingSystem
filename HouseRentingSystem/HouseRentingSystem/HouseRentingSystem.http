@@ -1,0 +1,6 @@
+@HouseRentingSystem_HostAddress = http://localhost:5141
+
+GET {{HouseRentingSystem_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
